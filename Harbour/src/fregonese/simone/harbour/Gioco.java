@@ -3,7 +3,7 @@ package fregonese.simone.harbour;
 public class Gioco {	
 		
 		Porto porto;
-		Invasore[] invaders;
+		Invasore invaders;
 		
 		public boolean isDestroyed(){
 			if(porto.getDimensione() <= 0)
@@ -21,19 +21,18 @@ public class Gioco {
 			this.porto = porto;
 		}
 
-		public Invasore[] getInvaders() {
+		public Invasore getInvaders() {
 			return invaders;
 		}
 
-		public void setInvaders(Invasore[] invaders) {
+		public void setInvaders(Invasore invaders) {
 			this.invaders = invaders;
 		}
 
+	
+		
 		public void attacco(){
-			for(int i = 0; i < invaders.length; i++){
-				porto.setDimensione(porto.getDimensione() - invaders[i].getPotenza() * 1.5);
-			}
-			
+			porto.setDimensione(porto.getDimensione() - (invaders.getPotenza() * 1.5));
 		}
 	
 

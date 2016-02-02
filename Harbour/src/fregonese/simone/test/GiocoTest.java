@@ -27,9 +27,10 @@ public class GiocoTest {
 		
 		Gioco g = new Gioco();
 		g.setPorto(p);
-		g.setInvaders(new Invasore[]{a,s});
+		g.setInvaders(new Invasore());
 		
-		
+		g.attacco();
+		System.out.println(p.getDimensione());
 		
 	
 	}	
